@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administration | ATLAS PRESTIGE VILLAS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="login-page" id="loginPage">
+  <div class="login-wrapper">
+    <div class="login-left">
+      <div class="login-content">
+        <div class="login-header">
+          <div class="logo-circle">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+            </svg>
+          </div>
+          <h1>ATLAS <span>Prestige</span></h1>
+          <p class="subtitle">Espace Administration</p>
+        </div>
+
+        <form class="login-form" id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </span>
+              <input type="email" id="email" placeholder="admin@atlasprestige.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </span>
+              <input type="password" id="password" placeholder="••••••••" required>
+              <button type="button" class="toggle-password" id="togglePassword">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-wrapper">
+              <input type="checkbox"> Se souvenir de moi
+            </label>
+          </div>
+
+          <button type="submit" class="btn-login">
+            Se Connecter
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+
+          <div class="error-message" id="loginError"></div>
+        </form>
+
+        <div class="login-footer">
+          <a href="reservation.html" class="back-link">← Retour au site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-right">
+      <div class="login-illustration">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#c9a961;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#a8893f;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="200" cy="200" r="150" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.3"/>
+          <circle cx="200" cy="200" r="120" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+          <circle cx="200" cy="200" r="90" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.7"/>
+          <path d="M 200 110 L 230 170 L 290 180 L 245 220 L 255 280 L 200 250 L 145 280 L 155 220 L 110 180 L 170 170 Z" 
+                fill="none" stroke="url(#goldGrad)" stroke-width="1.5"/>
+          <text x="200" y="340" text-anchor="middle" fill="#c9a961" font-family="Cormorant Garamond, serif" font-size="18" font-style="italic">L'Excellence à Marrakech</text>
+        </svg>
+      </div>
+      <div class="login-tagline">
+        <h2>Bienvenue dans votre espace</h2>
+        <p>Gérez vos réservations avec élégance</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dashboard-page" id="dashboardPage" style="display: none;">
+  <div class="admin-layout">
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <div class="logo-circle" style="width:45px;height:45px;margin:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-main">ATLAS</span>
+            <span class="logo-sub">Prestige Villas</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-section="dashboard">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          Tableau de bord
+        </a>
+        <a href="#" class="nav-item" data-section="reservations">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Réservations
+          <span class="badge" id="navBadge">0</span>
+        </a>
+        <a href="#" class="nav-item" data-section="statistics">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+          Statistiques
+        </a>
+        <a href="#" class="nav-item" data-section="clients">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          Clients
+        </a>
+        <a href="#" class="nav-item" data-section="settings">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          Paramètres
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="admin-info-sidebar">
+          <div class="admin-avatar">A</div>
+          <div class="admin-details">
+            <div class="admin-name-sidebar" id="sidebarAdminName">Administrateur</div>
+            <div class="admin-role">Admin</div>
+          </div>
+        </div>
+        <button class="logout-btn" id="logoutBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Déconnexion
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-header">
+        <div class="header-left">
+          <button class="menu-toggle" id="menuToggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+          <div class="page-title-wrapper">
+            <h2 id="pageTitle">Tableau de bord</h2>
+            <p class="page-subtitle" id="pageSubtitle">Vue d'ensemble de votre activité</p>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="current-time-wrapper">
+            <div class="current-date" id="currentDate">—</div>
+            <div class="current-time" id="currentTime">00:00:00</div>
+          </div>
+          <div class="header-actions">
+            <button class="icon-btn" id="refreshBtn" title="Actualiser">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="23 4 23 10 17 10"/>
+                <polyline points="1 20 1 14 7 14"/>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+              </svg>
+            </button>
+            <button class="icon-btn" title="Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+              <span class="notif-dot" id="notifDot"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="content-area">
+        
+        <section class="content-section active" id="dashboardSection">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon gold">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <h3 id="totalReservations">0</h3>
+                <p>Réservations totales</p>
+                <span class="stat-trend up">↗ Actif</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon green">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <h3 id="todayReservations">0</h3>
+                <p>Aujourd'hui</p>
+                <span class="stat-trend up">↗ Nouveau</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon blue">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="12" y1="1" x2="12" y2="23"/>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <h3 id="totalRevenue">0 €</h3>
+                <p>Revenu total</p>
+                <span class="stat-trend up">↗ Croissance</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon purple">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <h3 id="totalClients">0</h3>
+                <p>Clients uniques</p>
+                <span class="stat-trend up">↗ Fidélisation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="recent-reservations">
+              <div class="section-header">
+                <h3>Réservations récentes</h3>
+                <button class="btn-view-all" onclick="showSection('reservations')">Voir tout</button>
+              </div>
+              <div class="recent-list" id="recentReservationsList"></div>
+            </div>
+            <div class="top-villas">
+              <div class="section-header">
+                <h3>Top Villas</h3>
+              </div>
+              <div class="villas-ranking" id="topVillasList"></div>
+            </div>
+          </div>
+
+          <div class="status-overview">
+            <h3>Aperçu des statuts</h3>
+            <div class="status-grid">
+              <div class="status-item pending">
+                <div class="status-number" id="statusPending">0</div>
+                <div class="status-label">En attente</div>
+              </div>
+              <div class="status-item confirmed">
+                <div class="status-number" id="statusConfirmed">0</div>
+                <div class="status-label">Confirmées</div>
+              </div>
+              <div class="status-item completed">
+                <div class="status-number" id="statusCompleted">0</div>
+                <div class="status-label">Terminées</div>
+              </div>
+              <div class="status-item cancelled">
+                <div class="status-number" id="statusCancelled">0</div>
+                <div class="status-label">Annulées</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="reservationsSection">
+          <div class="filters-bar">
+            <div class="search-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" id="searchInput" placeholder="Rechercher une réservation...">
+            </div>
+            <div class="filters">
+              <select id="villaFilter">
+                <option value="">Toutes les villas</option>
+                <option value="atlas-royal">Atlas Royal Villa</option>
+                <option value="majorelle-prestige">Majorelle Prestige Villa</option>
+                <option value="palm-family">Palm Family Villa</option>
+                <option value="atlas-garden">Atlas Garden Villa</option>
+                <option value="diamond-palace">Diamond Palace Villa</option>
+                <option value="royal-prestige">Royal Prestige Palace</option>
+              </select>
+              <select id="statusFilter">
+                <option value="">Tous les statuts</option>
+                <option value="pending">En attente</option>
+                <option value="confirmed">Confirmée</option>
+                <option value="completed">Terminée</option>
+                <option value="cancelled">Annulée</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="reservations-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Date</th>
+                  <th>Client</th>
+                  <th>Villa</th>
+                  <th>Arrivée</th>
+                  <th>Départ</th>
+                  <th>Nuits</th>
+                  <th>Total</th>
+                  <th>Statut</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="reservationsTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="content-section" id="statisticsSection">
+          <div class="stats-detailed">
+            <h3>Performance par villa</h3>
+            <div class="stats-grid-detailed" id="villaStatsGrid"></div>
+          </div>
+          <div class="stats-detailed" style="margin-top: 40px;">
+            <h3>Statistiques mensuelles</h3>
+            <div class="monthly-stats" id="monthlyStats"></div>
+          </div>
+        </section>
+
+        <section class="content-section" id="clientsSection">
+          <div class="clients-header">
+            <h3>Base de données clients</h3>
+            <div class="search-box small">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" id="clientSearch" placeholder="Rechercher un client...">
+            </div>
+          </div>
+          <div class="clients-grid" id="clientsList"></div>
+        </section>
+
+        <section class="content-section" id="settingsSection">
+          <div class="settings-container">
+            <div class="settings-card">
+              <h3>Informations du compte</h3>
+              <form class="settings-form">
+                <div class="form-group">
+                  <label>Nom complet</label>
+                  <input type="text" id="settingsName" placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="email" id="settingsEmail" placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                  <label>Ancien mot de passe</label>
+                  <input type="password" id="settingsOldPassword" placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                  <label>Nouveau mot de passe</label>
+                  <input type="password" id="settingsNewPassword" placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                  <label>Confirmer le mot de passe</label>
+                  <input type="password" id="settingsConfirmPassword" placeholder="••••••••">
+                </div>
+                <button type="button" class="btn-save" id="saveSettingsBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                    <polyline points="17 21 17 13 7 13 7 21"/>
+                    <polyline points="7 3 7 8 15 8"/>
+                  </svg>
+                  Sauvegarder
+                </button>
+              </form>
+            </div>
+            <div class="settings-card">
+              <h3>Préférences</h3>
+              <div class="preferences-list">
+                <div class="preference-item">
+                  <div class="preference-info">
+                    <strong>Notifications email</strong>
+                    <span>Recevoir les alertes par email</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="preference-item">
+                  <div class="preference-info">
+                    <strong>Notifications push</strong>
+                    <span>Alertes en temps réel</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="preference-item">
+                  <div class="preference-info">
+                    <strong>Rapports hebdomadaires</strong>
+                    <span>Résumé chaque lundi</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="settings-card danger-zone">
+              <h3>Zone dangereuse</h3>
+              <p>Cette action est irréversible. Toutes les réservations seront supprimées définitivement.</p>
+              <button type="button" class="btn-danger" id="clearAllBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polyline points="3 6 5 6 21 6"/>
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
+                Supprimer toutes les données
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+
+<div class="modal" id="reservationModal">
+  <div class="modal-overlay" onclick="closeModal()"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Détails de la réservation</h3>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer">
+      <button class="btn-close" onclick="closeModal()">Fermer</button>
+      <button class="btn-download-pdf" onclick="downloadPDF()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Télécharger facture
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div class="notifications" id="notifications"></div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

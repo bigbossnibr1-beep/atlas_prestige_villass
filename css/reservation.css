@@ -1,0 +1,1330 @@
+:root {
+    --color-gold: #D4AF37;
+    --color-gold-light: #F4E8C1;
+    --color-black: #111111;
+    --color-black-light: #1A1A1A;
+    --color-white: #FFFFFF;
+    --color-beige: #F5F0E8;
+    --color-text: #333333;
+    --color-text-light: #777777;
+    --color-error: #e74c3c;
+    --color-success: #27ae60;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-beige);
+    line-height: 1.6;
+    overflow-x: hidden;
+    }
+    body.no-scroll {
+    overflow: hidden;
+    }
+    h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-black);
+    }
+    a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    }
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+    .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--transition);
+    background: transparent;
+    }
+    .header.scrolled {
+    background: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    padding: 15px 0;
+    }
+    .header.scrolled .logo {
+    color: var(--color-white);
+    border-color: var(--color-white);
+    }
+    .header.scrolled .nav a {
+    color: var(--color-white);
+    border-color: var(--color-white);
+    }
+    .header.scrolled .nav-cta {
+    color: var(--color-gold) !important;
+    border-color: var(--color-gold) !important;
+    background-color: transparent !important;
+    }
+    .header.scrolled .hamburger span {
+    background-color: var(--color-white);
+    }
+    .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-white);
+    z-index: 1001;
+    }
+    .nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    }
+    .nav a {
+    color: var(--color-white);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    }
+    .nav a.active,
+    .nav a:hover {
+    color: var(--color-gold);
+    }
+    .nav-cta {
+    border: 1px solid var(--color-gold) !important;
+    color: var(--color-gold) !important;
+    background-color: transparent !important;
+    padding: 10px 24px !important;
+    }
+    .nav-cta:hover {
+    background-color: var(--color-gold) !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-gold) !important;
+    transform: translateY(-2px);
+    }
+    .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+    background: none;
+    border: none;
+    padding: 0;
+    }
+    .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: var(--transition);
+    border-radius: 2px;
+    }
+    .hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+    opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    }
+    .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    }
+    .btn-primary {
+    background-color: var(--color-gold);
+    color: var(--color-white);
+    }
+    .btn-primary:hover {
+    background-color: #B89628;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    }
+    .btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+    }
+    .btn-outline:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    }
+    .btn-large {
+    width: 100%;
+    padding: 18px;
+    font-size: 1rem;
+    margin-top: 15px;
+    }
+    .hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    overflow: hidden;
+    }
+    .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa1r7BapbIkwq0ebJ-HAEfjA9NDua6DA8KAGfQLk_edpArkpHDGcztWu9I&s=10') center/cover no-repeat;
+    z-index: -2;
+    }
+    .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(17,17,17,0.4), rgba(17,17,17,0.8));
+    z-index: -1;
+    }
+    .hero-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--color-gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+    }
+    .hero-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    }
+    .hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    }
+    .main-content {
+    padding: 80px 20px;
+    }
+    .booking-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+    .step-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--color-white);
+    border-radius: 50px;
+    border: 1px solid #eee;
+    transition: var(--transition);
+    }
+    .step-indicator.active {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-black);
+    }
+    .step-indicator.completed {
+    background: var(--color-gold);
+    color: var(--color-white);
+    border-color: var(--color-gold);
+    }
+    .step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--color-beige);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    }
+    .step-indicator.active .step-number {
+    background: var(--color-gold);
+    color: var(--color-white);
+    }
+    .step-indicator.completed .step-number {
+    background: var(--color-white);
+    color: var(--color-gold);
+    }
+    .step-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    }
+    .step-connector {
+    width: 40px;
+    height: 2px;
+    background: #ddd;
+    flex-shrink: 0;
+    }
+    .section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+    }
+    .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-gold);
+    }
+    .booking-section {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+    }
+    @keyframes fadeInUp {
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
+    .hidden {
+    display: none !important;
+    }
+    .villas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    }
+    .villa-card {
+    background: var(--color-white);
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: var(--transition);
+    overflow: hidden;
+    }
+    .villa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+    .villa-card.selected {
+    border: 2px solid var(--color-gold);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+    }
+    .villa-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    }
+    .villa-info {
+    padding: 20px;
+    }
+    .villa-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    }
+    .villa-price {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    }
+    .villa-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    }
+    .villa-specs span {
+    background: var(--color-beige);
+    padding: 4px 10px;
+    border-radius: 4px;
+    }
+    .selected-villa-banner {
+    display: flex;
+    gap: 30px;
+    background: var(--color-white);
+    padding: 25px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--color-gold);
+    align-items: center;
+    }
+    .selected-villa-banner img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    }
+    .villa-banner-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    }
+    .highlight-price {
+    color: var(--color-gold);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 10px 0;
+    }
+    .services-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    }
+    .filter-btn {
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid #ddd;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-text);
+    border-radius: 50px;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-black);
+    }
+    .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    }
+    .service-card {
+    background: var(--color-white);
+    padding: 25px;
+    border: 1px solid #eee;
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    }
+    .service-card:hover {
+    border-color: var(--color-gold);
+    transform: translateY(-3px);
+    }
+    .service-card.selected {
+    border-color: var(--color-gold);
+    background: var(--color-gold-light);
+    }
+    .service-icon {
+    color: var(--color-gold);
+    margin-bottom: 15px;
+    }
+    .service-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    }
+    .service-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    flex: 1;
+    }
+    .service-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    }
+    .service-price {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 1rem;
+    }
+    .service-checkbox {
+    width: 22px;
+    height: 22px;
+    accent-color: var(--color-gold);
+    cursor: pointer;
+    }
+    .premium-form {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+    }
+    .form-group {
+    position: relative;
+    }
+    .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--color-black);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    background: var(--color-beige);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+    border-color: var(--color-gold);
+    background: var(--color-white);
+    }
+    .form-group.error input,
+    .form-group.error textarea {
+    border-color: var(--color-error);
+    }
+    .error-msg {
+    display: none;
+    color: var(--color-error);
+    font-size: 0.8rem;
+    margin-top: 5px;
+    }
+    .form-group.error .error-msg {
+    display: block;
+    }
+    .form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    }
+    .summary-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    }
+    .summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    }
+    .summary-block {
+    background: var(--color-white);
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+    .summary-block h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    }
+    .summary-villa-card {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    }
+    .summary-villa-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    }
+    .summary-villa-card h5 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    }
+    .summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    }
+    .summary-divider {
+    height: 1px;
+    background: #eee;
+    margin: 10px 0;
+    }
+    .services-list-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    }
+    .service-item-summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+    }
+    .pricing-card {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 30px;
+    border-radius: 4px;
+    position: sticky;
+    top: 100px;
+    }
+    .pricing-card h4 {
+    color: var(--color-white);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .pricing-card .summary-row {
+    color: rgba(255,255,255,0.8);
+    }
+    .pricing-card .summary-row.total {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 10px;
+    }
+    .pricing-card .summary-divider {
+    background: rgba(255,255,255,0.1);
+    }
+    .global-error {
+    color: var(--color-error);
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+    }
+    .footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 60px 0 30px;
+    }
+    .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    }
+    .footer-col h3 {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    }
+    .footer-col h4 {
+    color: var(--color-gold);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    }
+    .footer-col p,
+    .footer-col ul li {
+    color: #999;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+    .footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.85rem;
+    }
+    .chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1500;
+    }
+    .chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-gold);
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    }
+    .chatbot-toggle:hover {
+    transform: scale(1.1);
+    }
+    .chatbot-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 320px;
+    height: 420px;
+    background: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: var(--transition);
+    }
+    .chatbot-window.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    }
+    .chatbot-header {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-heading);
+    }
+    .chatbot-close {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    }
+    .chatbot-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: var(--color-beige);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+    .message {
+    max-width: 85%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    }
+    .message.bot {
+    background: var(--color-white);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    }
+    .message.user {
+    background: var(--color-gold);
+    color: var(--color-white);
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+    }
+    .message-time {
+    display: block;
+    font-size: 0.7rem;
+    margin-top: 5px;
+    opacity: 0.7;
+    text-align: right;
+    }
+    .chatbot-input {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    background: var(--color-white);
+    }
+    .chatbot-input input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-family: var(--font-body);
+    outline: none;
+    }
+    .chatbot-input button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-black);
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17,17,17,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    color: var(--color-white);
+    }
+    .loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(212,175,55,0.2);
+    border-top-color: var(--color-gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+    }
+    @keyframes spin {
+    to { transform: rotate(360deg); }
+    }
+    .step-actions {
+    margin-top: 50px;
+    text-align: center;
+    }
+    .btn-next {
+    padding: 18px 50px;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    }
+    .availability-notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    max-width: 450px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    transform: translateX(500px);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    }
+    .availability-notification.show {
+    transform: translateX(0);
+    }
+    .availability-notification.error {
+    border-left: 4px solid #dc3545;
+    }
+    .availability-notification.warning {
+    border-left: 4px solid #ffc107;
+    }
+    .availability-notification.success {
+    border-left: 4px solid #28a745;
+    }
+    .notification-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    }
+    .notification-content svg {
+    flex-shrink: 0;
+    color: #dc3545;
+    }
+    .availability-notification.warning .notification-content svg {
+    color: #ffc107;
+    }
+    .availability-notification.success .notification-content svg {
+    color: #28a745;
+    }
+    .notification-text {
+    flex: 1;
+    }
+    .notification-text h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    }
+    .notification-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    }
+    .notification-text strong {
+    color: #d4af37;
+    font-weight: 600;
+    }
+    .notification-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+    }
+    .notification-close:hover {
+    background: #f0f0f0;
+    color: #333;
+    }
+    
+    @media (max-width: 1024px) {
+    .section-title {
+    font-size: 1.8rem;
+    }
+    .hero-title {
+    font-size: 2.8rem;
+    }
+    .hero-subtitle {
+    font-size: 1.05rem;
+    }
+    .villas-grid,
+    .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    .summary-layout {
+    grid-template-columns: 1fr;
+    }
+    .pricing-card {
+    position: static;
+    }
+    .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    }
+    }
+    
+    @media (max-width: 768px) {
+    .hamburger {
+    display: flex;
+    }
+    .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--color-black);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: -5px 0 30px rgba(0,0,0,0.3);
+    padding: 80px 20px 40px;
+    overflow-y: auto;
+    }
+    .nav.active {
+    right: 0;
+    }
+    .nav a {
+    color: var(--color-white) !important;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav a:last-child {
+    border-bottom: none;
+    }
+    .nav .nav-cta {
+    margin-top: 10px;
+    width: 80% !important;
+    padding: 14px 28px !important;
+    border: 2px solid var(--color-gold) !important;
+    color: var(--color-gold) !important;
+    background-color: transparent !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 1.5px !important;
+    border-radius: 4px;
+    }
+    .nav .nav-cta:hover {
+    background-color: var(--color-gold) !important;
+    color: var(--color-white) !important;
+    }
+    .header.scrolled .nav {
+    background: var(--color-black);
+    }
+    .header.scrolled .nav a {
+    color: var(--color-white) !important;
+    }
+    .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    }
+    .nav-overlay.active {
+    display: block;
+    opacity: 1;
+    }
+    
+    .hero {
+    height: 50vh;
+    min-height: 350px;
+    padding: 0 20px;
+    }
+    .hero-tag {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    }
+    .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    }
+    .hero-subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
+    }
+    
+    .main-content {
+    padding: 50px 15px;
+    }
+    .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    }
+    
+    .booking-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .step-indicator {
+    padding: 10px 12px;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    }
+    .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+    }
+    .step-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .step-connector {
+    display: none;
+    }
+    
+    .villas-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    }
+    .villa-img {
+    height: 180px;
+    }
+    .villa-info {
+    padding: 15px;
+    }
+    .villa-info h3 {
+    font-size: 1.1rem;
+    }
+    .villa-price {
+    font-size: 1rem;
+    }
+    
+    .selected-villa-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+    }
+    .selected-villa-banner img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    }
+    .villa-banner-info h3 {
+    font-size: 1.3rem;
+    }
+    .highlight-price {
+    font-size: 1.1rem;
+    }
+    
+    .services-filter {
+    gap: 8px;
+    margin-bottom: 20px;
+    }
+    .filter-btn {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    }
+    .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    }
+    .service-card {
+    padding: 20px;
+    }
+    .service-card h4 {
+    font-size: 1rem;
+    }
+    
+    .premium-form {
+    padding: 25px 20px;
+    }
+    .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    }
+    
+    .summary-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    }
+    .summary-block {
+    padding: 20px;
+    }
+    .summary-block h4 {
+    font-size: 1rem;
+    }
+    .summary-villa-card {
+    flex-direction: column;
+    text-align: center;
+    }
+    .summary-villa-card img {
+    width: 100px;
+    height: 100px;
+    }
+    .pricing-card {
+    padding: 25px 20px;
+    position: static;
+    }
+    .pricing-card h4 {
+    font-size: 1.1rem;
+    }
+    .pricing-card .summary-row.total {
+    font-size: 1.1rem;
+    }
+    
+    .step-actions {
+    margin-top: 30px;
+    }
+    .btn-next {
+    padding: 14px 30px;
+    font-size: 0.85rem;
+    width: 100%;
+    }
+    .btn-large {
+    padding: 14px;
+    font-size: 0.9rem;
+    }
+    
+    .availability-notification {
+    top: 80px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+    }
+    
+    .footer {
+    padding: 50px 0 20px;
+    }
+    .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    }
+    .footer-col p,
+    .footer-col ul li {
+    justify-content: center;
+    }
+    
+    .chatbot-container {
+    bottom: 20px;
+    right: 20px;
+    }
+    .chatbot-toggle {
+    width: 55px;
+    height: 55px;
+    }
+    .chatbot-window {
+    width: calc(100vw - 40px);
+    max-width: 340px;
+    right: -10px;
+    bottom: 70px;
+    height: 450px;
+    max-height: 70vh;
+    }
+    }
+    
+    @media (max-width: 480px) {
+    .container {
+    padding: 0 15px;
+    }
+    .logo {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    }
+    .hero {
+    height: 45vh;
+    min-height: 300px;
+    }
+    .hero-title {
+    font-size: 1.8rem;
+    }
+    .hero-subtitle {
+    font-size: 0.85rem;
+    }
+    .section-title {
+    font-size: 1.4rem;
+    }
+    
+    .booking-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    max-width: 340px;
+    }
+    .step-indicator {
+    padding: 8px 10px;
+    gap: 6px;
+    }
+    .step-number {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+    }
+    .step-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.3px;
+    }
+    
+    .btn {
+    padding: 12px 24px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    }
+    .villa-img {
+    height: 160px;
+    }
+    .service-card {
+    padding: 18px 15px;
+    }
+    .premium-form {
+    padding: 20px 15px;
+    }
+    .form-group label {
+    font-size: 0.8rem;
+    }
+    .chatbot-window {
+    width: calc(100vw - 30px);
+    right: -5px;
+    height: 420px;
+    }
+    .chatbot-header {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    }
+    .chatbot-messages {
+    padding: 15px;
+    }
+    .message {
+    font-size: 0.85rem;
+    padding: 10px 14px;
+    }
+    }
+    
+    @media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 20px 50px;
+    }
+    .hero-title {
+    font-size: 2rem;
+    }
+    .booking-steps {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 500px;
+    }
+    .step-connector {
+    display: none;
+    }
+    .chatbot-window {
+    height: 80vh;
+    bottom: 70px;
+    }
+    }
+    
+    @media (hover: none) and (pointer: coarse) {
+    .btn:hover,
+    .villa-card:hover,
+    .service-card:hover {
+    transform: none;
+    }
+    .btn:active {
+    transform: scale(0.97);
+    }
+    }

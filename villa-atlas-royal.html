@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Tilila | ATLAS PRESTIGE VILLAS</title>
+    <link rel="stylesheet" href="css/villa-atlas-royal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">ATLAS PRESTIGE VILLAS</a>
+            <nav class="nav">
+                <a href="indexx.html">Accueil</a>
+                <a href="villas.html" class="active">Nos Villas</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="reservation.html" class="btn btn-primary nav-cta">Réserver</a>
+            </nav>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">Collection Exclusive</span>
+            <h1 class="hero-title">Villa Tilila</h1>
+            <p class="hero-location">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Marrakech, Maroc
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>500 m²</span>
+                </div>
+                <div class="stat">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M5 20v-8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8M2 12h20M7 12V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v5"></path></svg>
+                    <span>5 Chambres</span>
+                </div>
+                <div class="stat">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    <span>4 Salles de bain</span>
+                </div>
+                <div class="stat">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h20M2 12c0 5 4 9 9 9s9-4 9-9M2 12c0-5 4-9 9-9s9 4 9 9"></path></svg>
+                    <span>Piscine & Jardin</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="villas.html" class="btn btn-outline-light">Retour aux Villas</a>
+                <a href="#galerie" class="btn btn-primary">Voir la Galerie</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerie" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Immersion Visuelle</span>
+                <h2 class="section-title">Galerie Immersive</h2>
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Tout</button>
+                <button class="filter-btn" data-filter="exterieur">Extérieur</button>
+                <button class="filter-btn" data-filter="interieur">Intérieur</button>
+                <button class="filter-btn" data-filter="bien-etre">Bien-être</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="exterieur" data-src="villa-atlas-royal/EX.jpg">
+                    <img src="villa-atlas-royal/EX.jpg" alt="Vue extérieure de jour">
+                    <div class="gallery-overlay"><span>Vue Extérieure Jour</span></div>
+                </div>
+                <div class="gallery-item" data-category="bien-etre" data-src="villa-atlas-royal/PISCINE.jpg">
+                    <img src="villa-atlas-royal/PISCINE.jpg" alt="Piscine principale">
+                    <div class="gallery-overlay"><span>Piscine Principale</span></div>
+                </div>
+                <div class="gallery-item" data-category="interieur" data-src="villa-atlas-royal/SALON1.jpg">
+                    <img src="villa-atlas-royal/SALON1.jpg" alt="Salon principal">
+                    <div class="gallery-overlay"><span>Salon Principal</span></div>
+                </div>
+                <div class="gallery-item" data-category="interieur" data-src="villa-atlas-royal/CHAMBRE2.jpg">
+                    <img src="villa-atlas-royal/CHAMBRE2.jpg" alt="Suite Royale">
+                    <div class="gallery-overlay"><span>Chambre Principal</span></div>
+                </div>
+                <div class="gallery-item" data-category="bien-etre" data-src="villa-atlas-royal/SDB1.jpg">
+                    <img src="villa-atlas-royal/SDB1.jpg" alt="Salle de bain en marbre">
+                    <div class="gallery-overlay"><span>Salle de Bain </span></div>
+                </div>
+                <div class="gallery-item" data-category="exterieur" data-src="villa-atlas-royal/TERASSE.jpg">
+                    <img src="villa-atlas-royal/TERASSE.jpg" alt="Jardin et terrasse de nuit">
+                    <div class="gallery-overlay"><span>Terrasse de Nuit</span></div>
+                </div>
+                <div class="gallery-item" data-category="interieur" data-src="villa-atlas-royal/CUISINE.jpg">
+                    <img src="villa-atlas-royal/CUISINE.jpg" alt="Cuisine équipée">
+                    <div class="gallery-overlay"><span>Cuisine Équipée</span></div>
+                </div>
+                <div class="gallery-item" data-category="bien-etre" data-src="villa-atlas-royal/JEUX.jpg">
+                    <img src="villa-atlas-royal/JEUX.jpg" alt="Salle de sport">
+                    <div class="gallery-overlay"><span>Salle de Jeux</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <section class="section description-section">
+        <div class="container">
+            <div class="description-content">
+                <div class="description-text">
+                    <span class="section-tag">L'Histoire et l'Âme</span>
+                    <h2 class="section-title">Une Résidence d'Exception</h2>
+                    <p>L'hébergement Villa Tilila se trouve à Marrakech, à respectivement 5,7 km et 6,3 km de ces lieux d'intérêt : Palais de la Bahia et Musée Boucharouite. Il propose une piscine extérieure et la climatisation. Cette villa comprend une piscine privée, un jardin, un barbecue, un parking privé gratuit et une connexion Wi-Fi gratuite.</p>
+                    <p>Cette villa comporte 5 chambres, 4 salles de bains, du linge de lit, des serviettes, une télévision à écran plat avec les chaînes du satellite, un coin repas, une cuisine entièrement équipée et une terrasse offrant une vue sur la montagne. Tout l'hébergement est pour vous, dans un cadre luxueux et privatif.</p>
+                    <p>Vous séjournerez à respectivement 6,4 km et 8,7 km de ces lieux d'intérêt : Musée orientaliste de Marrakech et Place Jemaa el-Fna. L'aéroport le plus proche (Aéroport Marrakech-Ménara) est à 11 km. Un service de navette aéroport payant peut être assuré par l'établissement.</p>
+                </div>
+                <div class="description-image">
+                    <img src="villa-atlas-royal/ENTRER.jpg" alt="Détail architectural">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ses Points Forts</span>
+                <h2 class="section-title">Équipements & Services</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h20M2 12c0 5 4 9 9 9s9-4 9-9M2 12c0-5 4-9 9-9s9 4 9 9"></path></svg>
+                    <h3>Piscine Extérieure</h3>
+                    <p>Piscine privée chauffée avec vue sur la montagne, idéale pour se détendre en toute intimité.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+                    <h3>Connexion Wi-Fi Gratuite</h3>
+                    <p>WiFi haut débit disponible dans toute la villa pour rester connecté pendant votre séjour.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <h3>Navette Aéroport</h3>
+                    <p>Service de navette aéroport disponible sur demande pour faciliter votre arrivée et départ.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <h3>Parking Gratuit</h3>
+                    <p>Parking privé gratuit sur place pour garer votre véhicule en toute sécurité.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <h3>Chambres Non-Fumeurs</h3>
+                    <p>Toutes les chambres sont non-fumeurs pour garantir un air pur et sain à tous les hôtes.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                    <h3>Terrasse</h3>
+                    <p>Grande terrasse avec vue imprenable sur la montagne, parfaite pour les repas en plein air.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c4.97 0 9-4.03 9-9-4.5 0-9-9-9-9s-4.5 9-9 9c0 4.97 4.03 9 9 9z"></path></svg>
+                    <h3>Jardin</h3>
+                    <p>Jardin privatif luxuriant pour vous offrir un espace de détente et de verdure.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                    <h3>Salle de Jeux</h3>
+                    <p>Salle de jeux équipée pour divertir petits et grands pendant tout le séjour.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    <h3>Chauffage</h3>
+                    <p>Système de chauffage performant pour un confort optimal en toute saison.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"></path><line x1="6" y1="17" x2="18" y2="17"></line></svg>
+                    <h3>Installations Barbecue</h3>
+                    <p>Équipement de barbecue professionnel pour savourer des repas en plein air.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <h3>Service de Ménage Quotidien</h3>
+                    <p>Service de ménage quotidien inclus pour un intérieur toujours impeccable.</p>
+                </div>
+                <div class="feature-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <h3>Salle de Bains Privative</h3>
+                    <p>4 salles de bains privatives avec équipements haut de gamme pour chaque chambre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section floorplan-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Architecture</span>
+                <h2 class="section-title">Plan Interactif de la Villa Tilila</h2>
+                <p class="section-subtitle">Cliquez sur une zone pour découvrir ses détails</p>
+            </div>
+            <div class="floorplan-container">
+                <svg class="floorplan-svg" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="800" height="600" fill="#0A192F"/>
+                    <g class="floorplan-grid" stroke="#1A365D" stroke-width="1">
+                        <path d="M0 50 H800 M0 100 H800 M0 150 H800 M0 200 H800 M0 250 H800 M0 300 H800 M0 350 H800 M0 400 H800 M0 450 H800 M0 500 H800 M0 550 H800"/>
+                        <path d="M50 0 V600 M100 0 V600 M150 0 V600 M200 0 V600 M250 0 V600 M300 0 V600 M350 0 V600 M400 0 V600 M450 0 V600 M500 0 V600 M550 0 V600 M600 0 V600 M650 0 V600 M700 0 V600 M750 0 V600"/>
+                    </g>
+                    <g class="floorplan-rooms">
+                        <rect class="room-zone" data-room="salon-principal" x="50" y="50" width="200" height="180" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="150" y="145" text-anchor="middle" fill="#D4AF37" font-size="14" font-family="Montserrat" font-weight="600">Salon Principal</text>
+                        <text x="150" y="165" text-anchor="middle" fill="#D4AF37" font-size="11" font-family="Montserrat">85 m²</text>
+                        
+                        <rect class="room-zone" data-room="salle-a-manger" x="250" y="50" width="180" height="150" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="340" y="130" text-anchor="middle" fill="#D4AF37" font-size="14" font-family="Montserrat" font-weight="600">Salle à Manger</text>
+                        <text x="340" y="150" text-anchor="middle" fill="#D4AF37" font-size="11" font-family="Montserrat">45 m²</text>
+                        
+                        <rect class="room-zone" data-room="cuisine" x="250" y="200" width="180" height="130" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="340" y="270" text-anchor="middle" fill="#D4AF37" font-size="14" font-family="Montserrat" font-weight="600">Cuisine</text>
+                        <text x="340" y="290" text-anchor="middle" fill="#D4AF37" font-size="11" font-family="Montserrat">40 m²</text>
+                        
+                        <rect class="room-zone" data-room="chambre-1" x="430" y="50" width="120" height="110" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="490" y="110" text-anchor="middle" fill="#D4AF37" font-size="13" font-family="Montserrat" font-weight="600">Chambre 1</text>
+                        <text x="490" y="130" text-anchor="middle" fill="#D4AF37" font-size="10" font-family="Montserrat">30 m²</text>
+                        
+                        <rect class="room-zone" data-room="chambre-2" x="550" y="50" width="120" height="110" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="610" y="110" text-anchor="middle" fill="#D4AF37" font-size="13" font-family="Montserrat" font-weight="600">Chambre 2</text>
+                        <text x="610" y="130" text-anchor="middle" fill="#D4AF37" font-size="10" font-family="Montserrat">30 m²</text>
+                        
+                        <rect class="room-zone" data-room="chambre-3" x="670" y="50" width="100" height="110" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="720" y="110" text-anchor="middle" fill="#D4AF37" font-size="13" font-family="Montserrat" font-weight="600">Chambre 3</text>
+                        <text x="720" y="130" text-anchor="middle" fill="#D4AF37" font-size="10" font-family="Montserrat">25 m²</text>
+                        
+                        <rect class="room-zone" data-room="chambre-4" x="430" y="160" width="120" height="110" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="490" y="220" text-anchor="middle" fill="#D4AF37" font-size="13" font-family="Montserrat" font-weight="600">Chambre 4</text>
+                        <text x="490" y="240" text-anchor="middle" fill="#D4AF37" font-size="10" font-family="Montserrat">30 m²</text>
+                        
+                        <rect class="room-zone" data-room="chambre-5" x="550" y="160" width="120" height="110" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="610" y="220" text-anchor="middle" fill="#D4AF37" font-size="13" font-family="Montserrat" font-weight="600">Chambre 5</text>
+                        <text x="610" y="240" text-anchor="middle" fill="#D4AF37" font-size="10" font-family="Montserrat">30 m²</text>
+                        
+                        <rect class="room-zone" data-room="sdb-1" x="670" y="160" width="100" height="70" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="720" y="200" text-anchor="middle" fill="#D4AF37" font-size="12" font-family="Montserrat" font-weight="600">SDB 1</text>
+                        <text x="720" y="220" text-anchor="middle" fill="#D4AF37" font-size="10" font-family="Montserrat">15 m²</text>
+                        
+                        <rect class="room-zone" data-room="sdb-2" x="430" y="270" width="100" height="70" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="480" y="310" text-anchor="middle" fill="#D4AF37" font-size="12" font-family="Montserrat" font-weight="600">SDB 2</text>
+                        <text x="480" y="330" text-anchor="middle" fill="#D4AF37" font-size="10" font-family="Montserrat">15 m²</text>
+                        
+                        <rect class="room-zone" data-room="sdb-3" x="530" y="270" width="100" height="70" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="580" y="310" text-anchor="middle" fill="#D4AF37" font-size="12" font-family="Montserrat" font-weight="600">SDB 3</text>
+                        <text x="580" y="330" text-anchor="middle" fill="#D4AF37" font-size="10" font-family="Montserrat">15 m²</text>
+                        
+                        <rect class="room-zone" data-room="sdb-4" x="630" y="270" width="140" height="70" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="700" y="310" text-anchor="middle" fill="#D4AF37" font-size="12" font-family="Montserrat" font-weight="600">SDB 4</text>
+                        <text x="700" y="330" text-anchor="middle" fill="#D4AF37" font-size="10" font-family="Montserrat">20 m²</text>
+                        
+                        <rect class="room-zone" data-room="salle-jeux" x="50" y="230" width="200" height="120" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="150" y="295" text-anchor="middle" fill="#D4AF37" font-size="14" font-family="Montserrat" font-weight="600">Salle de Jeux</text>
+                        <text x="150" y="315" text-anchor="middle" fill="#D4AF37" font-size="11" font-family="Montserrat">30 m²</text>
+                        
+                        <rect class="room-zone" data-room="terrasse" x="50" y="350" width="250" height="120" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <text x="175" y="415" text-anchor="middle" fill="#D4AF37" font-size="14" font-family="Montserrat" font-weight="600">Terrasse</text>
+                        <text x="175" y="435" text-anchor="middle" fill="#D4AF37" font-size="11" font-family="Montserrat">120 m²</text>
+                        
+                        <rect class="room-zone" data-room="jardin" x="300" y="340" width="130" height="220" fill="none" stroke="#4FD1C5" stroke-width="2"/>
+                        <text x="365" y="455" text-anchor="middle" fill="#4FD1C5" font-size="13" font-family="Montserrat" font-weight="600">Jardin</text>
+                        <text x="365" y="475" text-anchor="middle" fill="#4FD1C5" font-size="10" font-family="Montserrat">Privé</text>
+                        
+                        <rect class="room-zone" data-room="piscine" x="430" y="340" width="320" height="160" fill="none" stroke="#4FD1C5" stroke-width="2"/>
+                        <text x="590" y="425" text-anchor="middle" fill="#4FD1C5" font-size="14" font-family="Montserrat" font-weight="600">Piscine Extérieure</text>
+                        <text x="590" y="445" text-anchor="middle" fill="#4FD1C5" font-size="11" font-family="Montserrat">Privée</text>
+                        
+                        <rect class="room-zone" data-room="parking" x="430" y="500" width="150" height="60" fill="none" stroke="#A0AEC0" stroke-width="2"/>
+                        <text x="505" y="535" text-anchor="middle" fill="#A0AEC0" font-size="12" font-family="Montserrat" font-weight="600">Parking</text>
+                        
+                        <rect class="room-zone" data-room="barbecue" x="580" y="500" width="170" height="60" fill="none" stroke="#A0AEC0" stroke-width="2"/>
+                        <text x="665" y="535" text-anchor="middle" fill="#A0AEC0" font-size="12" font-family="Montserrat" font-weight="600">Barbecue</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="roomModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="Room detail">
+                </div>
+                <div class="modal-info">
+                    <h3 id="modal-title">Titre de la pièce</h3>
+                    <p id="modal-surface" class="modal-surface">Surface: -- m²</p>
+                    <ul id="modal-features" class="modal-features"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section location-section">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-details">
+                    <span class="section-tag">Emplacement</span>
+                    <h2 class="section-title">Au Cœur de Marrakech</h2>
+                    <p>Située à Marrakech, la Villa Tilila offre un emplacement idéal pour explorer la ville ocre tout en profitant d'un havre de paix privatif.</p>
+                    <ul class="location-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            5,7 km du Palais de la Bahia
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            6,3 km du Musée Boucharouite
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            6,4 km du Musée orientaliste de Marrakech
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            8,7 km de la Place Jemaa el-Fna
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            11 km de l'Aéroport Marrakech-Ménara
+                        </li>
+                    </ul>
+                </div>
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108302.9939351755!2d-8.0772585!3d31.6345985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakech%2C%20Maroc!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Témoignages</span>
+                <h2 class="section-title">L'Avis de Nos Hôtes</h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Une propriété absolument stupéfiante. L'architecture est à couper le souffle et le service du personnel a été au-delà de toutes nos attentes. Un véritable palace privé au cœur de Marrakech."</p>
+                    <div class="review-author">
+                        <span class="author-name">Famille El Fassi</span>
+                        <span class="author-location">Casablanca, Maroc</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Nous avons célébré notre anniversaire de mariage ici. Le chef privé a préparé des repas incroyables et la piscine chauffée était parfaite pour les soirées. Une expérience inoubliable à Marrakech."</p>
+                    <div class="review-author">
+                        <span class="author-name">Karim & Fatima Bennani</span>
+                        <span class="author-location">Rabat, Maroc</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Le calme de la Palmeraie combiné au luxe moderne de cette villa en fait un endroit unique. La salle de sport et le jacuzzi ont été très appréciés. Nous reviendrons certainement."</p>
+                    <div class="review-author">
+                        <span class="author-name">Famille Tazi</span>
+                        <span class="author-location">Marrakech, Maroc</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Séjour parfait en famille. Les enfants ont adoré la piscine et l'espace de jeux. La gouvernante était aux petits soins. Un cadre idéal pour se ressourcer loin de l'agitation de la ville."</p>
+                    <div class="review-author">
+                        <span class="author-name">Youssef & Amina Alaoui</span>
+                        <span class="author-location">Fès, Maroc</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"La villa est encore plus belle en vrai qu'en photos. Les chambres sont spacieuses, la décoration est raffinée et le service de conciergerie a été exceptionnel du début à la fin."</p>
+                    <div class="review-author">
+                        <span class="author-name">Famille Chraibi</span>
+                        <span class="author-location">Tanger, Maroc</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Nous avons organisé un événement privé ici et tout était parfait. L'équipe a géré chaque détail avec professionnalisme. Le jardin de nuit est magique avec l'éclairage paysager."</p>
+                    <div class="review-author">
+                        <span class="author-name">Hassan & Nadia Idrissi</span>
+                        <span class="author-location">Agadir, Maroc</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Informations</span>
+                <h2 class="section-title">Questions Fréquentes</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">Combien de personnes peut accueillir la villa ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>La Villa Tilila peut accueillir confortablement jusqu'à 10 adultes et 2 enfants, grâce à ses 5 chambres spacieuses et ses 4 salles de bains. L'hébergement est entièrement privatif pour vous.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">La piscine est-elle privée ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Oui, la piscine extérieure est entièrement privée et réservée exclusivement aux occupants de la villa. Elle est entourée d'un jardin privatif pour une intimité totale.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Le parking est-il gratuit ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Oui, un parking privé gratuit est disponible sur place pour garer votre véhicule en toute sécurité pendant votre séjour.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Le WiFi est-il disponible ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Oui, une connexion Wi-Fi gratuite haut débit est disponible dans toute la villa pour rester connecté pendant votre séjour.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Un service de navette aéroport est-il disponible ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Oui, un service de navette aéroport payant peut être assuré par l'établissement sur demande. L'aéroport Marrakech-Ménara est à 11 km de la villa.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Le service de ménage est-il inclus ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Oui, un service de ménage quotidien est inclus dans le prix de la location pour garantir un intérieur toujours impeccable pendant votre séjour.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">La villa est-elle adaptée aux familles ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Absolument. La villa dispose d'une salle de jeux, d'une piscine privée, d'un jardin et de 5 chambres spacieuses. Les chambres sont non-fumeurs et la villa est entièrement équipée pour accueillir les familles.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Quelles attractions sont à proximité ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>La villa est située à 5,7 km du Palais de la Bahia, 6,3 km du Musée Boucharouite, 6,4 km du Musée orientaliste, 8,7 km de la Place Jemaa el-Fna et 11 km de l'aéroport.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ATLAS PRESTIGE VILLAS</h3>
+                    <p>L'excellence immobilière à Marrakech. Votre partenaire de confiance pour des expériences inoubliables.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="indexx.html">Accueil</a></li>
+                        <li><a href="villas.html">Nos Villas</a></li>
+                        <li><a href="services.html">Services Premium</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            45 Rue de la Palmeraie, 40000 Marrakech, Maroc
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            +212 0767129762
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            atlasprestige@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atlas Prestige Villas. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <span>Conciergerie Atlas</span>
+                <button class="chatbot-close" id="chatbotClose">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    <p>Bonjour. Je suis l'assistant virtuel de la Villa Tilila. Posez-moi une question sur la villa, les chambres, la piscine, les services, la localisation ou le contact.</p>
+                    <span class="message-time">Maintenant</span>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Écrivez votre message...">
+                <button id="chatbotSend">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/villa-atlas-royal.js"></script>
+</body>
+</html>

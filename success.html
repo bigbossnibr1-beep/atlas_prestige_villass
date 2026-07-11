@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation Confirmée | ATLAS PRESTIGE VILLAS</title>
+    <link rel="stylesheet" href="css/reservation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header scrolled">
+        <div class="container header-container">
+            <a href="index.html" class="logo">ATLAS PRESTIGE VILLAS</a>
+            <nav class="nav">
+                <a href="indexx.html">Accueil</a>
+                <a href="villas.html">Nos Villas</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="reservation.html" class="btn btn-outline nav-cta">Nous Contacter</a>
+        </div>
+    </header>
+
+    <main class="container main-content" style="padding-top: 150px;">
+        <section class="thank-you-card">
+            <div class="success-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="8 12 11 15 16 9"></polyline>
+                </svg>
+            </div>
+            <span class="section-tag">Confirmation</span>
+            <h2 class="section-title">Réservation Confirmée</h2>
+            <p class="thank-you-text">
+                Cher(e) <strong id="tyName"></strong>, votre demande de réservation a été enregistrée avec succès.
+            </p>
+
+            <div class="reservation-details">
+                <div class="detail-row">
+                    <span class="detail-label">Numéro de Réservation</span>
+                    <span class="detail-value" id="tyResNumber"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Villa Sélectionnée</span>
+                    <span class="detail-value" id="tyVilla"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Dates du Séjour</span>
+                    <span class="detail-value" id="tyDates"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Durée</span>
+                    <span class="detail-value" id="tyNights"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Voyageurs</span>
+                    <span class="detail-value" id="tyGuests"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Services Sélectionnés</span>
+                    <span class="detail-value" id="tyServices"></span>
+                </div>
+                <div class="detail-row total">
+                    <span class="detail-label">Total TTC</span>
+                    <span class="detail-value" id="tyTotal"></span>
+                </div>
+            </div>
+
+            <p class="thank-you-footer">
+                Notre équipe de conciergerie vous contactera dans les 24 heures à l'adresse <strong id="tyEmail"></strong> pour finaliser les détails et procéder au paiement sécurisé.
+            </p>
+
+            <div class="ty-actions">
+                <a id="downloadPdfBtn" class="btn btn-outline" href="#">Télécharger le Reçu PDF</a>
+                <a href="indexx.html" class="btn btn-primary">Retour à l'Accueil</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atlas Prestige Villas. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const data = JSON.parse(localStorage.getItem('reservation'));
+            if (!data) {
+                window.location.href = 'reservation.html';
+                return;
+            }
+
+            const formatDate = (d) => {
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return new Date(d).toLocaleDateString('fr-FR', options);
+            };
+
+            const formatPrice = (n) => new Intl.NumberFormat('fr-FR').format(Math.round(n));
+
+            document.getElementById('tyName').textContent = data.first_name + ' ' + data.last_name;
+            document.getElementById('tyResNumber').textContent = data.number;
+            document.getElementById('tyVilla').textContent = data.villa_name;
+            document.getElementById('tyDates').textContent = formatDate(data.check_in) + ' au ' + formatDate(data.check_out);
+            document.getElementById('tyNights').textContent = data.nights + ' nuit(s)';
+            document.getElementById('tyGuests').textContent = (parseInt(data.adults) + parseInt(data.children)) + ' personne(s)';
+            document.getElementById('tyServices').textContent = data.services.length ? data.services.join(', ') : 'Aucun service additionnel';
+            document.getElementById('tyTotal').textContent = formatPrice(data.total) + ' €';
+            document.getElementById('tyEmail').textContent = data.email;
+
+            document.getElementById('downloadPdfBtn').href = 'php/generate-receipt.php?ref=' + encodeURIComponent(data.number);
+        });
+    </script>
+</body>
+</html>

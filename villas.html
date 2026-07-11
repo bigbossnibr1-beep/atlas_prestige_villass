@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Villas de Luxe | ATLAS PRESTIGE VILLAS</title>
+    <link rel="stylesheet" href="css/villa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">ATLAS PRESTIGE VILLAS</a>
+            <nav class="nav">
+                <a href="indexx.html">Accueil</a>
+                <a href="villas.html">Nos Villas</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="reservation.html" class="btn btn-primary nav-cta">Réserver</a>
+            </nav>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Nos Villas de Luxe</h1>
+            <p class="hero-subtitle">Une collection exclusive de propriétés d'exception au cœur de Marrakech</p>
+            <div class="search-filter">
+                <div class="filter-group">
+                    <label>Type de Villa</label>
+                    <select id="filterType">
+                        <option value="all">les catégories</option>
+                        <option value="familiale">Villas Familiales</option>
+                        <option value="prestige">Villas Prestige</option>
+                        <option value="luxe">Villas Luxe</option>
+                        <option value="ultra">Villas Ultras Luxe</option>
+                        <option value="vip">Villas VIP</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Chambres</label>
+                    <select id="filterRooms">
+                        <option value="all">Toutes</option>
+                        <option value="3">3+ Chambres</option>
+                        <option value="4">4+ Chambres</option>
+                        <option value="5">5+ Chambres</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Budget / Nuit</label>
+                    <select id="filterPrice">
+                        <option value="all">Tous les prix</option>
+                        <option value="1000">Moins de 1 000 MAD</option>
+                        <option value="1500">1 000 - 1 500 MAD</option>
+                        <option value="2500">1 500 - 2 500 MAD</option>
+                        <option value="3500">Plus de 2 500 MAD</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary filter-btn" id="applyFilters">Explorer</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section intro-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">L'Excellence Immobilière</span>
+                <h2 class="section-title">L'Art de Vivre à la Marocaine</h2>
+            </div>
+            <div class="intro-content">
+                <p>Marrakech, ville ocre aux mille et une nuances, offre un cadre de vie exceptionnel où le luxe contemporain épouse l'architecture traditionnelle berbère et andalouse. Chez Atlas Prestige Villas, nous avons sélectionné avec une rigueur absolue les propriétés les plus remarquables de la Palmeraie, de l'Hivernage et des collines de l'Atlas.</p>
+                <p>Chaque villa de notre collection a été choisie pour son emplacement privilégié, son architecture singulière et les prestations haut de gamme qu'elle propose. Nous ne vendons pas simplement des murs, mais un art de vivre. De la discrétion absolue des jardins privatifs à la qualité des matériaux nobles utilisés, chaque détail a été pensé pour offrir une expérience client inégalée.</p>
+                <p>Notre engagement va au-delà de la location ou de la vente. Nous orchestrons des séjours sur mesure, anticipant vos moindres désirs grâce à notre conciergerie VIP disponible 24 heures sur 24. Sécurité, intimité et raffinement sont les maîtres mots de notre philosophie, garantissant à notre clientèle internationale exigeante un havre de paix au cœur de l'effervescence marrakchie.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section villas-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Collection Exclusive</span>
+                <h2 class="section-title">Nos Villas Vedettes</h2>
+            </div>
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">Toutes</button>
+                <button class="tab-btn" data-category="familiale">Villas Familiales</button>
+                <button class="tab-btn" data-category="prestige">Villas Prestige</button>
+                <button class="tab-btn" data-category="luxe">Villas Luxe</button>
+                <button class="tab-btn" data-category="ultra">Villas Ultras Luxe</button>
+                <button class="tab-btn" data-category="vip">Villas VIP</button>
+            </div>
+            <div class="villas-grid" id="villasGrid">
+                <div class="villa-card" data-category="prestige" data-rooms="5" data-price="1200">
+                    <div class="villa-image">
+                        <img src="asset/TALILA.jpg" alt="Villa Tilila">
+                        <span class="villa-badge">Prestige</span>
+                    </div>
+                    <div class="villa-details">
+                        <h3 class="villa-name">Villa Tilila</h3>
+                        <p class="villa-price">1 200 MAD / nuit</p>
+                        <div class="villa-features">
+                            <span class="feature">5 Chambres</span>
+                            <span class="feature">4 SDB</span>
+                            <span class="feature">10 Pers.</span>
+                        </div>
+                        <a href="villa-atlas-royal.html" class="btn btn-dark">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="villa-card" data-category="prestige" data-rooms="5" data-price="1600">
+                    <div class="villa-image">
+                        <img src="asset/Dar Saada.jpg" alt="Dar Saada Private Villa">
+                        <span class="villa-badge">Prestige</span>
+                    </div>
+                    <div class="villa-details">
+                        <h3 class="villa-name">Dar Saada Private Villa</h3>
+                        <p class="villa-price">1 600 MAD / nuit</p>
+                        <div class="villa-features">
+                            <span class="feature">5 Chambres</span>
+                            <span class="feature">3 SDB</span>
+                            <span class="feature">10 Pers.</span>
+                        </div>
+                        <a href="villa-majorelle-prestige.html" class="btn btn-dark">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="villa-card" data-category="familiale" data-rooms="3" data-price="900">
+                    <div class="villa-image">
+                        <img src="asset/SALAH.jpeg" alt="Villa de Salah">
+                        <span class="villa-badge">Familiale</span>
+                    </div>
+                    <div class="villa-details">
+                        <h3 class="villa-name">Villa de Salah</h3>
+                        <p class="villa-price">900 MAD / nuit</p>
+                        <div class="villa-features">
+                            <span class="feature">3 Chambres</span>
+                            <span class="feature">4 SDB</span>
+                            <span class="feature">8 Pers.</span>
+                        </div>
+                        <a href="villa-palm-family.html" class="btn btn-dark">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="villa-card" data-category="luxe" data-rooms="4" data-price="1400">
+                    <div class="villa-image">
+                        <img src="asset/LES LAURIERS.jpg" alt="Villa LES LAURIERS">
+                        <span class="villa-badge">Luxe</span>
+                    </div>
+                    <div class="villa-details">
+                        <h3 class="villa-name">Villa LES LAURIERS</h3>
+                        <p class="villa-price">1 400 MAD / nuit</p>
+                        <div class="villa-features">
+                            <span class="feature">4 Chambres</span>
+                            <span class="feature">4 SDB</span>
+                            <span class="feature">10 Pers.</span>
+                        </div>
+                        <a href="villa-atlas-garden.html" class="btn btn-dark">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="villa-card" data-category="ultra" data-rooms="4" data-price="2500">
+                    <div class="villa-image">
+                        <img src="asset/Le Joyau Villa.jpg" alt="Marrakech Le Joyau Villa">
+                        <span class="villa-badge">Ultras Luxe</span>
+                    </div>
+                    <div class="villa-details">
+                        <h3 class="villa-name">Marrakech Le Joyau Villa</h3>
+                        <p class="villa-price">2 500 MAD / nuit</p>
+                        <div class="villa-features">
+                            <span class="feature">4 Chambres</span>
+                            <span class="feature">3 SDB</span>
+                            <span class="feature">10 Pers.</span>
+                        </div>
+                        <a href="villa-diamond-palace.html" class="btn btn-dark">Voir détails</a>
+                    </div>
+                </div>
+
+                <div class="villa-card" data-category="vip" data-rooms="4" data-price="3500">
+                    <div class="villa-image">
+                        <img src="asset/Elyana.jpg" alt="Villa Elyana">
+                        <span class="villa-badge">VIP</span>
+                    </div>
+                    <div class="villa-details">
+                        <h3 class="villa-name">Villa Elyana</h3>
+                        <p class="villa-price">3 500 MAD / nuit</p>
+                        <div class="villa-features">
+                            <span class="feature">4 Chambres</span>
+                            <span class="feature">3 SDB</span>
+                            <span class="feature">12 Pers.</span>
+                        </div>
+                        <a href="villa-royal-prestige.html" class="btn btn-dark">Voir détails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Témoignages</span>
+                <h2 class="section-title">L'Avis de Nos Hôtes</h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Une propriété absolument stupéfiante. L'architecture est à couper le souffle et le service du personnel a été au-delà de toutes nos attentes. Un véritable palace privé."</p>
+                    <div class="review-author">
+                        <span class="author-name">Jean-Philippe D.</span>
+                        <span class="author-location">Paris, France</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Nous avons célébré notre anniversaire de mariage ici. Le chef privé a préparé des repas incroyables et la piscine chauffée était parfaite pour les soirées. Inoubliable."</p>
+                    <div class="review-author">
+                        <span class="author-name">Sarah & Mark T.</span>
+                        <span class="author-location">Londres, UK</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Le calme de la Palmeraie combiné au luxe moderne de cette villa en fait un endroit unique. La salle de sport et le jacuzzi ont été très appréciés. Je recommande vivement."</p>
+                    <div class="review-author">
+                        <span class="author-name">Elena R.</span>
+                        <span class="author-location">Milan, Italie</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Informations</span>
+                <h2 class="section-title">Questions Fréquentes</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">Combien de personnes peut accueillir la villa ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>L'Atlas Royal Villa peut accueillir confortablement jusqu'à 12 adultes et 4 enfants, grâce à ses 6 chambres spacieuses et ses espaces de vie généreux.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Quels services sont inclus dans le prix de la location ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Le prix inclut l'accès à toutes les installations, le service de gouvernante quotidienne, l'entretien de la piscine et du jardin, ainsi que la sécurité 24h/24. Les services comme le chef privé, le chauffeur ou le spa sont disponibles en option.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">La piscine est-elle chauffée ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Oui, la piscine de 15x5 mètres est équipée d'un système de chauffage performant, disponible sur demande avec un léger supplément pour couvrir les frais énergétiques, garantissant un confort optimal même en hiver.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">La villa est-elle sécurisée pour les familles ? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Absolument. La propriété est entièrement close, surveillée, et nous pouvons installer des barrières de sécurité pour la piscine et des lits à barreaux sur simple demande lors de votre réservation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ATLAS PRESTIGE VILLAS</h3>
+                    <p>L'excellence immobilière à Marrakech. Votre partenaire de confiance pour des expériences inoubliables.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="indexx.html">Accueil</a></li>
+                        <li><a href="villas.html">Nos Villas</a></li>
+                        <li><a href="services.html">Services Premium</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            45 Rue de la Palmeraie, 40000 Marrakech, Maroc
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            +212 0767129762
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            atlasprestige@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atlas Prestige Villas. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <span>Conciergerie Atlas</span>
+                <button class="chatbot-close" id="chatbotClose">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    <p>Bonjour. Je suis l'assistant virtuel d'Atlas Prestige Villas. Comment puis-je vous aider à trouver la villa de vos rêves ?</p>
+                    <span class="message-time">Maintenant</span>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Écrivez votre message...">
+                <button id="chatbotSend">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/villas.js"></script>
+</body>
+</html>
