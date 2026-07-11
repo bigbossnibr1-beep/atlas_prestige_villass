@@ -1254,7 +1254,7 @@ const VILLAS_DATA = {
 };
 
 const DEFAULT_ADMIN = {
-    email: 'admin@atlasprestige.com',
+    email: 'adminatlasprestige@gmail.com',
     password: 'admin123',
     name: 'Administrateur'
 };
