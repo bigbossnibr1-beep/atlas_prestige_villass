@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (!localStorage.getItem('adminAccount')) {
         const defaultAdmin = {
-            email: 'admin@atlasprestige.com',
+            email: 'adminatlasprestige@gmail.com',
             password: 'admin123',
             role: 'super-admin'
         };
